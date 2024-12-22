@@ -20,7 +20,7 @@ p {
 }
 
 
-a, .btn {
+a, .btn , .pro-btn{
   transition: all 300ms ease;
 
 }
