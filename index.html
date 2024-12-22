@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+</head>
+<body>
+    <nav id = 'desktop-nav'>
+        <div class="logo">Smayan Ranjan</div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Technical Skills</a></li>
+                <li><a href="#contact">Contact Me</a></li>
+            </ul>
+        </div>
+    </nav>
+    <nav id="hamburger-nav">
+        <div class="logo">Smayan Ranjan</div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+                <li><a href="#skills" onclick="toggleMenu()">Technical Skills</a></li>
+                <li><a href="#contact" onclick="toggleMenu()">Contact Me</a></li>
+            </div>
+        </div>
+    </nav>
+    <section id="profile">
+        <div class="section__text">
+            <h1 class="special-effects"><span>Hello, I'm Smayan. Nice to Meet You!</span></h1>
+            <p class="section__text__p2">Data Science Student at the University of Michigan</p>
+            <div class="btn-container">
+                <button class="btn-color-2 pro-btn" onClick="window.open('./assets/resume.pdf')">View Resume</button>
+                <button class="btn-color-1 pro-btn" onClick="location.href='./#contact'">Contact Me</button>
+            </div>
+            <div id="socials-container">
+                <img src="./assets/linkedin.png" alt = "My LinkedIn Profile" class="icon" onClick="window.open('https://www.linkedin.com/in/smayan-ranjan/', '_blank')">
+                <img src="./assets/github.png" alt = "My Github Profile" class="icon" onClick="window.open('https://github.com/smayan2303', '_blank')">
+            </div>
+        </div>
+    </section>
+    
+    <section id="about">
+        <p class="section__text__p1">Get To Know More</p>
+        <h1 class="title">About Me</h1>
+        <div class="section-container">
+          <div class="section__pic-container">
+            <img
+              src="./assets/image.png"
+              alt="Profile picture"
+              class="about-pic"
+            />
+          </div>
+          <div class="about-details-container">
+            <div class="about-containers">
+                <div class="details-container2">
+                    <img
+                      src="./assets/education.png"
+                      alt="Education icon"
+                      class="icon2"
+                    />
+                    <h3>Education</h3>
+                    <p>Data Science Major<br />University of Michigan College of Engineering</p>
+                </div>
+              <div class="details-container1">
+                <img
+                  src="./assets/experience.png"
+                  alt="Experience icon"
+                  class="icon2"
+                />
+                <h3>Experience</h3>
+                <p>Functional Food Center: <br />Web Development Intern</p>
+              </div>
+            </div>
+            <div class="text-container">
+              <p class="special-effects2">
+                <span>Coursework:</span> <span>Data Structures and Algorithms,</span> <span>Computer Organization,</span> <span>SQL and Database Management Systems,</span> 
+                <span>Data Mining and Statistical Learning,</span> <span>Applied Regression Analysis,</span> <span>Computer Vision,</span> <span>Discrete
+                    Mathematics,</span> <span>Computer Science Pragmatics,</span> <span>Linear Algebra </span>               
+              </p>
+            </div>
+          </div>
+        </div>
+        <img
+          src="./assets/arrow.png"
+          alt="Arrow icon"
+          class="icon2 arrow"
+          onclick="location.href='./#projects'"
+        />
+    </section>
+
+    <section id="projects">
+        <p class="section__text__p1">Browse My Recent</p>
+        <h1 class="title">Projects</h1>
+        <div class="experience-details-container">
+          <div class="about-containers">
+            <div class="details-container color-container">
+                <div class="article-container">
+                  <img
+                    src="./assets/bank.png"
+                    alt="Project 1"
+                    class="project-img"
+                  />
+                </div>
+                <h2 class="experience-sub-title project-title">Bank Transaction System Simulator</h2>
+                <div class="btn-container">
+                  
+                  <button
+                      class="btn btn-color-2 project-btn toggle-btn"
+                      onclick="toggleDetails(this)"
+                    >
+                      Read More
+                  </button>
+                </div>
+                <div class="extra-details hidden">
+                  <p>
+                      Designed and implemented a banking system to manage transactions, user authentication, and real-time balance updates,
+                      supporting over 1,000 users and 10,000 transactions.
+  
+                  </p>
+                </div>
+              </div>
+            <div class="details-container color-container">
+              <div class="article-container">
+                <img
+                  src="./assets/InvestingAide.png"
+                  alt="Project 2"
+                  class="project-img"
+                />
+              </div>
+              <h2 class="experience-sub-title project-title">Investing Aide Stock Analysis Dashboard</h2>
+              <div class="btn-container">
+                <button
+                  class="btn btn-color-1 project-btn"
+                  onClick="window.open('https://investing-aide.streamlit.app/', '_blank')"
+                >
+                  View Project
+                </button>
+                <button
+                    class="btn btn-color-2 project-btn toggle-btn"
+                    onclick="toggleDetails(this)"
+                  >
+                    Read More
+                </button>
+              </div>
+              <div class="extra-details hidden">
+                <p>
+                    Developed an interactive stock dashboard using Streamlit to help users perform technical 
+                    analysis and track stock performance with real-time data and AI-driven insights.
+                </p>
+              </div>
+            </div>
+            <div class="details-container color-container">
+                <div class="article-container">
+                  <img
+                    src="./assets/MVP.png"
+                    alt="Project 3"
+                    class="project-img"
+                  />
+                </div>
+                <h2 class="experience-sub-title project-title">NBA MVP Award Predictor</h2>
+                <div class="btn-container">
+                  <button
+                    class="btn btn-color-1 project-btn"
+                    onClick="window.open('https://github.com/smayan2303/NBA-MVP-Predictor', '_blank')"
+                  >
+                    View Project
+                  </button>
+                  <button
+                      class="btn btn-color-2 project-btn toggle-btn"
+                      onclick="toggleDetails(this)"
+                    >
+                      Read More
+                  </button>
+                </div>
+                <div class="extra-details hidden">
+                  <p>
+                    Used a Ridge Regression Model to reveal which of the 40+ metrics correlate most to winning an MVP and used that
+                    data to predict the future MVP winner. Predicted Giannis to win the 2025 MVP.
+                  </p>
+                </div>
+              </div>
+              
+          </div>
+        </div>
+        <img
+          src="./assets/arrow.png"
+          alt="Arrow icon"
+          class="icon2 arrow"
+          onclick="location.href='./#projects2'"
+        />
+      </section>
+      <section id="projects2">
+        <div class="experience-details-container">
+            <div class="about-containers">
+              <div class="details-container color-container">
+                  <div class="article-container">
+                    <img
+                      src="./assets/piazza.png"
+                      alt="Project 4"
+                      class="project-img"
+                    />
+                  </div>
+                  <h2 class="experience-sub-title project-title">Piazza Forum Post Classifier</h2>
+                  <div class="btn-container">
+                    
+                    <button
+                        class="btn btn-color-2 project-btn toggle-btn"
+                        onclick="toggleDetails(this)"
+                      >
+                        Read More
+                    </button>
+                  </div>
+                  <div class="extra-details hidden">
+                    <p>
+                        Automatically identifies the subject of posts from a class’s discussion forum and achieved 
+                        87 Percent accuracy in label prediction. Utilized Natural Language Processing concepts such 
+                        as Log-Likelihood and ”Bag of Words” model to build a classifier on
+                        the tendencies of previous posts, capturing complex language patterns within the labeled training data.
+    
+                    </p>
+                  </div>
+                </div>
+              <div class="details-container color-container">
+                <div class="article-container">
+                  <img
+                    src="./assets/Calc.png"
+                    alt="Project 5"
+                    class="project-img"
+                  />
+                </div>
+                <h2 class="experience-sub-title project-title">Iphone Calculator App Replica</h2>
+                <div class="btn-container">
+                  <button
+                    class="btn btn-color-1 project-btn"
+                    onClick="window.open('https://iphone-calculator-five.vercel.app/', '_blank')"
+                  >
+                    View Project
+                  </button>
+                  <button
+                      class="btn btn-color-2 project-btn toggle-btn"
+                      onclick="toggleDetails(this)"
+                    >
+                      Read More
+                  </button>
+                </div>
+                <div class="extra-details hidden">
+                  <p>
+                    Developed a fully functional, responsive calculator using HTML, CSS, and JavaScript 
+                    designed to be visually and functionally identical to Apple's calculator application for Iphone.
+                  </p>
+                </div>
+              </div>
+              <div class="details-container color-container">
+                  <div class="article-container">
+                    <img
+                      src="./assets/MM.jpg"
+                      alt="Project 6"
+                      class="project-img"
+                    />
+                  </div>
+                  <h2 class="experience-sub-title project-title">March Madness Bracket Predictor</h2>
+                  <div class="btn-container">
+                    <button
+                      class="btn btn-color-1 project-btn"
+                      onClick="window.open('https://github.com/smayan2303/Web-Scraping-and-SQL-For-March-Madness', '_blank')"
+                    >
+                      View Project
+                    </button>
+                    <button
+                        class="btn btn-color-2 project-btn toggle-btn"
+                        onclick="toggleDetails(this)"
+                      >
+                        Read More
+                    </button>
+                  </div>
+                  <div class="extra-details hidden">
+                    <p>
+                        Developed a machine learning model to predict the NCAA March Madness tournament bracket, 
+                        leveraging historical game data and advanced analytics to maximize prediction accuracy. Scored in the 84th
+                        percentile of all brackets for the 2024 tournament.
+                    </p>
+                  </div>
+                </div>
+                
+            </div>
+          </div>
+          <img
+          src="./assets/arrow.png"
+          alt="Arrow icon"
+          class="icon2 arrow"
+          onclick="location.href='./#skills'"
+        />
+      </section>
+
+    <section id="skills">
+        <p class="section__text__p1">Take a look at my</p>
+        <h1 class="title">Technical Skills</h1>
+        <div class="experience-details-container">
+          <div class="about-containers">
+            <div class="details-container2">
+              <h2 class="experience-sub-title">Languages</h2>
+              <div class="article-container">
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon2"
+                  />
+                  <div>
+                    <h3>C++</h3>
+                    <p>Experienced</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon2"
+                  />
+                  <div>
+                    <h3>C</h3>
+                    <p>Experienced</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon2"
+                  />
+                  <div>
+                    <h3>Python</h3>
+                    <p>Intermediate</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon2"
+                  />
+                  <div>
+                    <h3>JavaScript</h3>
+                    <p>Intermediate</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon2"
+                  />
+                  <div>
+                    <h3>HTML/CSS</h3>
+                    <p>Intermediate</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon2"
+                  />
+                  <div>
+                    <h3>TypeScript</h3>
+                    <p>Basic</p>
+                  </div>
+                </article>
+              </div>
+            </div>
+            <div class="details-container1">
+              <h2 class="experience-sub-title">Tools and Frameworks</h2>
+              <div class="article-container">
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon2"
+                  />
+                  <div>
+                    <h3>Git</h3>
+                    <p>Experienced</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon2"
+                  />
+                  <div>
+                    <h3>Jupyter</h3>
+                    <p>Experienced</p>
+                  </div>
+                </article>
+                
+                <article>
+                    <img
+                      src="./assets/checkmark.png"
+                      alt="Experience icon"
+                      class="icon2"
+                    />
+                    <div>
+                      <h3>Pandas</h3>
+                      <p>Experienced</p>
+                    </div>
+                  </article>
+                  <article>
+                    <img
+                      src="./assets/checkmark.png"
+                      alt="Experience icon"
+                      class="icon2"
+                    />
+                    <div>
+                      <h3>SciKit Learn</h3>
+                      <p>Intermediate</p>
+                    </div>
+                  </article>
+                  <article>
+                    <img
+                      src="./assets/checkmark.png"
+                      alt="Experience icon"
+                      class="icon2"
+                    />
+                    <div>
+                      <h3>React JS</h3>
+                      <p>Intermediate</p>
+                    </div>
+                  </article>
+                  <article>
+                    <img
+                      src="./assets/checkmark.png"
+                      alt="Experience icon"
+                      class="icon2"
+                    />
+                    <div>
+                      <h3>Node JS</h3>
+                      <p>Intermediate</p>
+                    </div>
+                  </article>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img
+          src="./assets/arrow.png"
+          alt="Arrow icon"
+          class="icon2 arrow"
+          onclick="location.href='./#contact'"
+        />
+      </section>
+    
+      <section id="contact">
+        <p class="section__text__p1">Get in Touch</p>
+        <h1 class="title">Contact Me</h1>
+        <div class="contact-info-upper-container">
+          <div class="contact-info-container">
+            <img
+              src="./assets/email.png"
+              alt="Email icon"
+              class="icon2 contact-icon email-icon"
+            />
+            <p><a href="mailto:smayan@umich.edu">smayan@umich.edu</a></p>
+          </div>
+          <div class="contact-info-container">
+            <img
+              src="./assets/linkedin.png"
+              alt="LinkedIn icon"
+              class="icon2 contact-icon"
+            />
+            <p><a href="https://www.linkedin.com/in/smayan-ranjan/" target="_blank">LinkedIn</a></p>
+          </div>
+        </div>
+      </section>
+      <footer>
+        <nav>
+          <div class="nav-links-container">
+            <ul class="nav-links">
+              <li><a href="#about">About</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#skills">Technical Skills</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+        <p>Website created by Smayan Ranjan. Thanks for visiting!</p>
+      </footer>
+    <script src="script.js"></script>
+</body>
+</html>
