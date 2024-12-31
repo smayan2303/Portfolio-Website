@@ -340,10 +340,18 @@ section {
   border-radius: 2rem;
 }
 
+.about-pic:hover {
+  transform: translateY(-10px);
+}
+
 .arrow{
   position: absolute;
   right: -5rem;
   bottom: 2.5rem;
+}
+
+.arrow:hover {
+  transform: translateY(-5px);
 }
 
 .details-container1 {
@@ -364,6 +372,10 @@ section {
   border:rgb(53,53,53) 0.15rem solid;
   border-color: purple;
   text-align: center;
+}
+
+.details-container1:hover, .details-container2:hover {
+  transform: translateY(-5px);
 }
 
 .details-container {
@@ -444,6 +456,7 @@ section {
 }
 
 article {
+  border-radius:1rem;
   display: flex;
   width: 10rem;
   justify-content: space-around;
@@ -511,4 +524,68 @@ footer {
 
 footer p {
   text-align: center;
+}
+
+/* Add this to your existing CSS file */
+
+/* General transition for all elements */
+* {
+  transition: all 0.3s ease;
+}
+
+/* Buttons */
+.btn, .pro-btn {
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn:hover, .pro-btn:hover {
+  transform: translateY(-5px);
+}
+
+/* Project containers */
+.details-container.color-container {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.details-container.color-container:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Skill items */
+.article-container article {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.article-container article:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Social icons */
+#socials-container .icon {
+  transition: transform 0.3s ease;
+}
+
+#socials-container .icon:hover {
+  transform: translateY(-5px);
+}
+
+/* Navigation links */
+.nav-links li {
+  transition: transform 0.3s ease;
+}
+
+.nav-links li:hover {
+  transform: translateY(-3px);
+}
+
+/* Contact info containers */
+.contact-info-container {
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.contact-info-container:hover {
+  transform: translateY(-5px);
+  background-color: rgba(255, 255, 255, 0.1);
 }
