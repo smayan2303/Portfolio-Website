@@ -59,6 +59,10 @@ a:hover {
   text-decoration-color: rgb(51,204,51);
 }
 
+.purple:hover {
+  text-decoration-color: purple;
+}
+
 .logo {
   font-size: 2.5rem;
   transition: text-shadow 0.25s ease;
