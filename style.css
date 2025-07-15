@@ -593,3 +593,127 @@ footer p {
   transform: translateY(-5px);
   background-color: rgba(255, 255, 255, 0.1);
 }
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+@media screen and (max-width: 992px) {
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.project-card {
+  background: white;
+  border: 2px solid rgb(163, 163, 163);
+  padding: 2rem;
+  border-radius: 1.5rem;
+  text-align: center;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+}
+
+.project-card h2 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+/* Modal fade-in */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  animation: fadeIn 0.3s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.modal-content {
+  background-color: white;
+  margin: 10% auto;
+  padding: 2rem;
+  border: 1px solid #888;
+  width: 90%;
+  max-width: 600px;
+  border-radius: 1rem;
+  position: relative;
+  animation: popFadeIn 0.3s ease forwards;
+}
+
+@keyframes popFadeIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.modal-content p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.close {
+  color: #aaa;
+  position: absolute;
+  right: 1.5rem;
+  top: 1.2rem;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+}
+
+@keyframes fadeOutContent {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+}
+
+@keyframes fadeOutOverlay {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+.modal.fade-out .modal-content {
+  animation: fadeOutContent 0.3s forwards;
+}
+
+.modal.fade-out {
+  animation: fadeOutOverlay 0.3s forwards;
+}
