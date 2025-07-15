@@ -16,3 +16,28 @@ function toggleDetails(button) {
     button.textContent = 'Read More';
   }
 }
+
+function openModal(id) {
+  const modal = document.getElementById(id);
+  modal.classList.remove("fade-out");
+  modal.style.display = "block";
+}
+
+function closeModal(id) {
+  const modal = document.getElementById(id);
+  modal.classList.add("fade-out");
+
+  setTimeout(() => {
+    modal.style.display = "none";
+    modal.classList.remove("fade-out");
+  }, 300);
+}
+
+window.onclick = function (event) {
+  const modals = document.querySelectorAll('.modal');
+  modals.forEach(modal => {
+    if (event.target === modal) {
+      closeModal(modal.id);
+    }
+  });
+}
